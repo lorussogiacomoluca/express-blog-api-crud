@@ -1,3 +1,5 @@
+const postList = require('../public/data/postsList')
+
 //index
 const index = (req, res) => {
     res.send('Homepage dei post');
