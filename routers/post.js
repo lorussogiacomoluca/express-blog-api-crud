@@ -16,6 +16,9 @@ router.get('/', (req, res) =>{
     res.json(postList)
 })
 
+
+
+
 //show
 router.get('/:id', (req, res)=>{
     const id = parseInt(req.params.id)
