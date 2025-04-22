@@ -7,9 +7,13 @@ const index = (req, res) => {
 
 //show
 const show = (req, res) => {
+    //get ID
     const id = parseInt(req.params.id)
+    //Find selected post
     const filtred = postList.find((post) => post.id === id)
+    //BONUS: check if post exist and manage respose status
     if(!filtred){
+        //set status = 404
         res.status(404).json({
             error: 'Not Found',
             message: 'Post non trovato'
@@ -35,17 +39,23 @@ const modify = (req, res) => {
 
 //destroy
 const destroy = (req, res) => {
-    
+    //Get ID from req
     const id = parseInt(req.params.id)
+    //Find post in postList
     const filtred = postList.find((post) => post.id === id)
+    //BONUS: check if post exist and manage respose status
     if(!filtred){
+        //set status = 404
         res.status(404).json({
             error: 'Not Found',
             message: 'Post non trovato'
         })
     }
+    //Splice function: deleting selected post
     postList.splice(postList.indexOf(filtred, 1))
+    //set status = 204 and send
     res.status(204).send()
+    //console.log of postList
     console.log(postList)
 };
 
