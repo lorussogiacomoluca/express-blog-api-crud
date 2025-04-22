@@ -1,8 +1,9 @@
-const postList = require('../public/data/postsList')
+const postList = require('../public/data/postsList');
+const { post } = require('../routers/post');
 
 //index
 const index = (req, res) => {
-    res.send('Homepage dei post');
+    res.json(postList);
 };
 
 //show
