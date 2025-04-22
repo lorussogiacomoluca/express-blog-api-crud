@@ -1,5 +1,4 @@
 const postList = require('../public/data/postsList');
-const { post } = require('../routers/post');
 
 //index
 const index = (req, res) => {
@@ -12,8 +11,8 @@ const show = (req, res) => {
     const filtred = postList.find((post) => post.id === id)
     if(!filtred){
         res.status(404).json({
-            error: 'Not Fount',
-            message: 'Pizza non trovata'
+            error: 'Not Found',
+            message: 'Post non trovato'
         })
     }
     res.json(filtred)
@@ -36,7 +35,17 @@ const modify = (req, res) => {
 
 //destroy
 const destroy = (req, res) => {
-    res.send(`destroy del post ${req.params.id}`);
+    
+    const id = parseInt(req.params.id)
+    const filtred = postList.find((post) => post.id === id)
+    if(!filtred){
+        res.status(404).json({
+            error: 'Not Found',
+            message: 'Post non trovato'
+        })
+    }
+    postList.splice(postList.indexOf(filtred, 1))
+    res.status(204)
 };
 
 //exporting
