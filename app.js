@@ -10,6 +10,12 @@ const port = 3000
 //Define public asset folder
 app.use(express.static('public'))
 
+//import post router
+const postRouter = require('./routers/post.js')
+
+//connect the post router to /post url
+app.use('/post', postRouter)
+
 app.get('/', (req,res)=>{
     res.send('Il mio blog')
 })
