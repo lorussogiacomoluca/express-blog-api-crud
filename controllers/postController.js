@@ -2,7 +2,13 @@ const postList = require('../public/data/postsList');
 
 //index
 const index = (req, res) => {
-    res.json(postList);
+    const tag = req.query.tag
+    let filtredList = postList
+    if(tag){
+        filtredList = postList.filter((post) => post.tags.includes(tag))
+    }
+    res.json(filtredList)
+    
 };
 
 //show
