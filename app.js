@@ -7,6 +7,9 @@ const app = express()
 //app port
 const port = 3000
 
+//Define public asset folder
+app.use(express.static('public'))
+
 app.get('/', (req,res)=>{
     res.send('Il mio blog')
 })
