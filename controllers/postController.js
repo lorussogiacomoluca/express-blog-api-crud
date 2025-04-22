@@ -5,7 +5,7 @@ const index = (req, res) => {
 
 //show
 const show = (req, res) => {
-    res.send('show del post');
+    res.send(`show del post ${req.params.id}`);
 };
 
 //store
@@ -15,17 +15,17 @@ const store = (req, res) => {
 
 //update
 const update = (req, res) => {
-    res.send('update dei post');
+    res.send(`update del post ${req.params.id}`);
 };
 
 //modify
 const modify = (req, res) => {
-    res.send('modify del post');
+    res.send(`modify del post ${req.params.id}`);
 };
 
 //destroy
 const destroy = (req, res) => {
-    res.send('destroy del post');
+    res.send(`destroy del post ${req.params.id}`);
 };
 
 //exporting
