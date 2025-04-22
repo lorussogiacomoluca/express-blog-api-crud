@@ -45,7 +45,8 @@ const destroy = (req, res) => {
         })
     }
     postList.splice(postList.indexOf(filtred, 1))
-    res.status(204)
+    res.status(204).send()
+    console.log(postList)
 };
 
 //exporting
