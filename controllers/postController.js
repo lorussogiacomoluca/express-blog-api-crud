@@ -8,7 +8,15 @@ const index = (req, res) => {
 
 //show
 const show = (req, res) => {
-    res.send(`show del post ${req.params.id}`);
+    const id = parseInt(req.params.id)
+    const filtred = postList.find((post) => post.id === id)
+    if(!filtred){
+        res.status(404).json({
+            error: 'Not Fount',
+            message: 'Pizza non trovata'
+        })
+    }
+    res.json(filtred)
 };
 
 //store
