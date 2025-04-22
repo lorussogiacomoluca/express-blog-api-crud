@@ -7,6 +7,10 @@ const router = express.Router()
 //import post array
 const postList = require('../public/data/postsList')
 
+//import controller
+const postController = require('../controllers/postController')
+
+
 //index
 router.get('/', (req, res) =>{
     res.json(postList)
