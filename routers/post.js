@@ -12,39 +12,22 @@ const postController = require('../controllers/postController')
 
 
 //index
-router.get('/', (req, res) =>{
-    res.json(postList)
-})
-
-
-
+router.get('/', postController.index)
 
 //show
-router.get('/:id', (req, res)=>{
-    const id = parseInt(req.params.id)
-    const filtred = postList.find((post) => post.id === id)
-    res.json(filtred)
-})
+router.get('/:id', postController.show)
 
 //store
-router.post('/', (req, res)=>{
-    res.send('Inserimento di un nuovo post effettuato')
-})
+router.post('/', postController.store)
 
 //update
-router.put('/:id', (req, res)=>{
-    res.send(`Modifica totale del post con id ${req.params.id}`)
-} )
+router.put('/:id', postController.update)
 
 //modify
-router.patch('/:id', (req, res)=>{
-    res.send(`Modifica parziale del post con id ${req.params.id}`)
-} )
+router.patch('/:id', postController.modify)
 
 //destroy
-router.delete('/:id', (req, res)=>{
-    res.send(`Eliminazione del post con id ${req.params.id}`)
-} )
+router.delete('/:id', postController.destroy)
 
 //Export router
 module.exports = router
