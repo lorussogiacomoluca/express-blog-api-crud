@@ -39,6 +39,11 @@ const store = (req, res) => {
 
     //Create newID
     const newID = genID();
+
+    //Destructuring body request
+    const {title, content, image, tags} = req.body
+
+    
     
 };
 
