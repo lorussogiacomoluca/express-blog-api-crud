@@ -51,6 +51,13 @@ const store = (req, res) => {
         image,
         tags
     }
+    
+    //Push new post in postList
+    postList.push(newPost)
+    console.log(postList)
+    
+    
+    
 };
 
 //update
