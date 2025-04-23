@@ -1,5 +1,10 @@
 const postList = require('../public/data/postsList');
 
+//IDGenerator Function
+const genID = () =>{
+    return postList[postList.length -1].id +1
+}
+
 //index
 const index = (req, res) => {
     const tag = req.query.tag
@@ -30,7 +35,11 @@ const show = (req, res) => {
 
 //store
 const store = (req, res) => {
-    res.send('store del post');
+    //res.send('store del post');
+
+    //Create newID
+    const newID = genID();
+    
 };
 
 //update
