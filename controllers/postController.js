@@ -56,8 +56,9 @@ const store = (req, res) => {
     postList.push(newPost)
     console.log(postList)
     
-    
-    
+    //Set Status 201 and send new postList in json
+    res.status(201)
+    res.json(postList)
 };
 
 //update
