@@ -45,7 +45,7 @@ const store = (req, res) => {
 
     //Create newPost object
     const newPost = {
-        newID,
+        //fixed
         title,
         content,
         image,
