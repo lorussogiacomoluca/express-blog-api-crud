@@ -63,7 +63,10 @@ const store = (req, res) => {
 
 //update
 const update = (req, res) => {
-    res.send(`update del post ${req.params.id}`);
+    //res.send(`update del post ${req.params.id}`);
+
+    //Save id 
+    const id = parseInt(req.params.id)
 };
 
 //modify
