@@ -71,6 +71,17 @@ const update = (req, res) => {
     //Find post by ID
     const post = postList.find((post) => post.id === id)
 
+    //Check if post exists
+    if(!post){
+        res.status(404)
+
+        return res.json({
+            error: 'Not Found',
+            message: 'Post non trovato'
+        })
+    }
+
+    //Destructuring
     const {title, content, image, tags} = req.body
 
     //Making update
@@ -79,6 +90,7 @@ const update = (req, res) => {
     post.image = image,
     post.tags = tags
 
+    //Send post after update
     console.log(post)
     res.json(post)
 };
