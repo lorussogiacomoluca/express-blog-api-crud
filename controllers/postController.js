@@ -67,6 +67,10 @@ const update = (req, res) => {
 
     //Save id 
     const id = parseInt(req.params.id)
+
+    //Find post by ID
+    const post = postList.find((post) => post.id === id)
+
 };
 
 //modify
