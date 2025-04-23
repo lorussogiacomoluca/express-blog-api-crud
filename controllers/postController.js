@@ -43,8 +43,14 @@ const store = (req, res) => {
     //Destructuring body request
     const {title, content, image, tags} = req.body
 
-    
-    
+    //Create newPost object
+    const newPost = {
+        newID,
+        title,
+        content,
+        image,
+        tags
+    }
 };
 
 //update
