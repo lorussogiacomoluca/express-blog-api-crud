@@ -7,6 +7,9 @@ const app = express()
 //app port
 const port = 3000
 
+//Body parsing: json
+app.use(express.json())
+
 //Define public asset folder
 app.use(express.static('public'))
 
