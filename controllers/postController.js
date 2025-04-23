@@ -71,6 +71,16 @@ const update = (req, res) => {
     //Find post by ID
     const post = postList.find((post) => post.id === id)
 
+    const {title, content, image, tags} = req.body
+
+    //Making update
+    post.title = title,
+    post.content = content,
+    post.image = image,
+    post.tags = tags
+
+    console.log(post)
+    res.json(post)
 };
 
 //modify
