@@ -21,6 +21,8 @@ app.use('/post', postRouter)
 
 //define notFound middleware variable
 const notFound = require('./middleware/notFound.js')
+//notFound middleware register
+app.use(notFound)
 
 app.get('/', (req,res)=>{
     res.send('Il mio blog')
