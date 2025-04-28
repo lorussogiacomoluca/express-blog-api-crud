@@ -25,7 +25,7 @@ const notFound = require('./middleware/notFound.js')
 app.use(notFound)
 
 //define errorsHandler middleware variable
-const errorHandler = require('./middleware/notFound.js')
+const errorHandler = require('./middleware/errorsHandler.js')
 //errorHandler middleware register
 app.use(errorHandler)
 
