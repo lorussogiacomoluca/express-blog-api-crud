@@ -7,7 +7,6 @@ const genID = () =>{
 
 //index
 const index = (req, res) => {
-    chiamataErrore()
     const tag = req.query.tag
     let filtredList = postList
     if(tag){
