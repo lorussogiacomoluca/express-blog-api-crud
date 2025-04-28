@@ -24,6 +24,9 @@ const notFound = require('./middleware/notFound.js')
 //notFound middleware register
 app.use(notFound)
 
+//define errorsHandler middleware variable
+const errorHandler = require('./middleware/notFound.js')
+
 app.get('/', (req,res)=>{
     res.send('Il mio blog')
 })
