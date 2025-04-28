@@ -19,6 +19,9 @@ const postRouter = require('./routers/post.js')
 //connect the post router to /post url
 app.use('/post', postRouter)
 
+//define notFound middleware variable
+const notFound = require('./middleware/notFound.js')
+
 app.get('/', (req,res)=>{
     res.send('Il mio blog')
 })
