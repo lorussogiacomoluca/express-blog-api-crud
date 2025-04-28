@@ -8,3 +8,5 @@ const notFound = function(req, res, next){
         message: `Nessuna pagina trovata`
     })
 }
+//Define module.exports
+module.exports = notFound
