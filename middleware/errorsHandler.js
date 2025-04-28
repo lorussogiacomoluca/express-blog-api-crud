@@ -10,4 +10,4 @@ const errorHandler = function(err, req, res, next){
 }
 
 //Define module.exports
-module.exports = notFound
+module.exports = errorHandler
