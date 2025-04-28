@@ -36,17 +36,17 @@ Ora passiamo ad implementare le logiche delle nostre **CRUD**:
 
 🧑‍💻 **Buon Lavoro e buon divertimento!** 🎉
 
+---
 
-# 📘 esercizio di oggi: Express Blog - API CRUD (parte 2)
-
-🗂️ **repo**: `express-blog-api-crud`
+# 📘 Esercizio 42  
+## 🚀 Express Blog - API CRUD (parte 2)  
+📁 **Repo:** `express-blog-api-crud`
 
 ---
 
-## 🛠️ Esercizio
+## 📋 Esercizio
 
-### 🥇 Milestone 1
-
+### 🎯 Milestone 1  
 Per iniziare, andiamo su Postman e prepariamo una nuova chiamata verso la nostra rotta store.  
 ✅ Impostiamo il verbo e l’endpoint corretti  
 ✅ Selezioniamo il tab body e scegliamo il formato raw e JSON  
@@ -57,22 +57,19 @@ Per iniziare, andiamo su Postman e prepariamo una nuova chiamata verso la nostra
 
 ---
 
-### 🥈 Milestone 2
-
+### 🛠️ Milestone 2  
 🔧 Impostiamo il body-parser per far sì che la nostra app riesca a decifrare il request body.  
 🖨️ Poi, all’interno della rotta Store, stampiamo nel terminale i dati in arrivo, grazie a un `console.log`
 
 ---
 
-### 🥉 Milestone 3
-
+### 🛠️ Milestone 3  
 🚀 Implementiamo quindi la logica per aggiungere un nuovo post al nostro blog, e prepariamo la risposta adeguata.  
 🧪 Testiamolo con postman.
 
 ---
 
-### 🏁 Milestone 4
-
+### 🛠️ Milestone 4  
 ♻️ Ripetiamo il procedimento per la rotta di Update, in modo da avere la possibilità di modificare le nostre risorse.
 
 ---
@@ -81,26 +78,34 @@ Per iniziare, andiamo su Postman e prepariamo una nuova chiamata verso la nostra
 
 ---
 
-### 🎁 Bonus
-
+### 🎁 Bonus  
 - Quelli del giorno prima, se non già fatti  
 - In Update, controllare se il parametro si riferisce ad un post esistente, in caso contrario, rispondere con uno stato `404` e un messaggio d’errore, sempre in formato JSON.
 
 ---
 
-👨‍💻 **Buon Lavoro e buon divertimento**
+👨‍💻 **Buon Lavoro e buon divertimento!** 🎉
 
-# 📚 Esercizio 43 - Parte 3
+---
 
-Ciao ragazzi, esercizio di oggi: **Express Blog - Middlewares**  
-repo: **express-blog-api-crud** (sempre la stessa)
+# 📘 Esercizio 43  
+## 🚀 Express Blog - Middlewares  
+📁 **Repo:** `express-blog-api-crud` (sempre la stessa)
 
-## 🛠️ Esercizio
+---
+
+## 📋 Esercizio
 
 Dopo aver completato tutte le operazioni CRUD, completiamo le nostre API inserendo un middleware per la gestione delle rotte non registrate e uno per la gestione degli errori.  
 
 ⚡ Se viene chiamato un endpoint inesistente, un middleware dovrà rispondere un messaggio e uno status appropriato.  
 
-⚡ Se viene generato un errore, un middleware si occuperà di rispondere con un messaggio e uno status appropriato.  
+⚡ Se viene generato un errore, un middleware si occuperà di rispondere con un messaggio e uno status appropriato.
 
-🔢 Numero minimo di push 4
+---
+
+🔢 **Numero minimo di push**: `4`
+
+---
+
+🧑‍💻 **Buon Lavoro e buon divertimento!** 🎉
